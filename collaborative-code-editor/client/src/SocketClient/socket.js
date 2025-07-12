@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-const socket = io("https://codesync-backend-6tyd.onrender.com",
+const socket = io("https://codesync-rqbm.onrender.com",
      { 
         withCredentials: true,
         transports: ['websocket', 'polling'],
