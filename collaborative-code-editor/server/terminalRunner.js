@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
 const Docker = require('dockerode');
+require('dotenv').config();
 const { v4: uuidv4 } = require('uuid');
 
 const docker = new Docker();
@@ -504,7 +505,7 @@ await session.container.putArchive(pack, { path: targetPath });
 // Pull images when starting
 pullImages().then(() => {
   const PORT = 5000;
-  server.listen(process.env.TerminalPORT, () => {
+  server.listen(process.env.TerminalPORT || 5000 () => {
     console.log(`🖥️ Terminal server running on ws://localhost:${PORT}`);
     console.log('Supported languages:', Object.keys(IMAGE_CONFIG));
   });
