@@ -19,6 +19,7 @@ const runPythonCodeWithInput = require('./runCodeWithDocker');
 const allowedRoomCreations = new Set();
 
 const allowedOrigins = [
+  "https://codesync-gray.vercel.app",
   "https://663d-152-59-10-193.ngrok-free.app",
   "http://localhost:3000",
 ];
