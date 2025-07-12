@@ -297,7 +297,7 @@ const EmailAuth = () => {
         }
       } else if (showForgotPassword) {
         await sendPasswordResetEmail(auth, email, {
-          url: 'http://localhost:3000/reset-password', 
+          url: 'https://codesync-gray.vercel.app/reset-password', 
           handleCodeInApp: false 
         });
         setMessage("Password reset email sent. Please check your inbox. If you don't see it, check your spam folder.");
@@ -307,7 +307,7 @@ const EmailAuth = () => {
         const user = result.user;
 
         await sendEmailVerification(user, {
-          url: 'http://localhost:3000/verify',
+          url: 'https://codesync-gray.vercel.app/verify',
           handleCodeInApp: true
         });
         setMessage("Verification email sent. Please check your inbox. If you don't see it, check your spam folder. Please Verify Your Email First.");
