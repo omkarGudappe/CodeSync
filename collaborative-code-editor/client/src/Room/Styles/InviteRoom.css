@@ -1,0 +1,107 @@
+/* Share Modal Styles */
+.share-modal {
+  animation: fadeIn 0.3s ease-out;
+  background-color: #2f2e2e;
+  height: 50vh;
+  width: 60vh;
+}
+
+.btn-close .btn-close-white .p-2{
+    border: none;
+}
+
+.btn-close .btn-close-white .p-2:active{
+    border: none;
+}
+
+.modalBodyHeader{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Logo-container{
+    display: flex;
+    margin-top: 3vh;
+    height: 10vh;
+    width: 30vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo{
+    height: 12rem;
+    width: 12rem;
+}
+
+.CopyText{
+    width: 18rem;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+    border:none;
+    height: 2.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.BtnActive{
+    background: rgb(4, 208, 4);
+}
+
+.NotBtnActive{
+    background: rgb(250, 189, 20);
+}
+
+.CopyTextBtn{
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius:0.6rem;
+    border: none;
+    width: 3rem;
+}
+
+.Button-Container{
+    margin-top: 3vh;
+    justify-content: center;
+}
+
+.share-option-btn{
+    border: none;
+    height: 5vh;
+    font-size: 5vh;
+    background:transparent;
+}
+
+@media (max-width:438px) {
+    .share-modal{
+        width: 50vh;
+    }
+    .CopyText{
+        width: 15rem;
+    }
+}
+
+/* .share-link-container input {
+  cursor: text;
+}
+
+.share-options {
+  margin-top: 1.5rem;
+}
+
+.share-option-btn {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-info {
+  border: 1px solid #4a5568;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+} */

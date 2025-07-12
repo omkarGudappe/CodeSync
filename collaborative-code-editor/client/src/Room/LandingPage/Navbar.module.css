@@ -1,0 +1,49 @@
+.navbar {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+}
+
+.navbarBrand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+.navbarBrand span {
+  color: var(--primary);
+}
+
+.btnOutlineLight {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.btnOutlineLight:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.btnPrimary {
+  background: var(--primary);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.btnPrimary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.5);
+  color: white;
+}

@@ -1,0 +1,105 @@
+  Error part
+
+1->
+  Uncaught runtime errors:
+ERROR
+OnTerminalError is not a function
+./src/Room/Pages/TerminalE.jsx/TerminalE/</timer</<@http://localhost:3000/static/js/bundle.js:375277:28
+FrameRequestCallback*./src/Room/Pages/TerminalE.jsx/TerminalE/</timer<@http://localhost:3000/static/js/bundle.js:375268:30
+setTimeout handler*./src/Room/Pages/TerminalE.jsx/TerminalE/<@http://localhost:3000/static/js/bundle.js:375250:29
+react-stack-bottom-frame@http://localhost:3000/static/js/bundle.js:263922:18
+runWithFiberInDEV@http://localhost:3000/static/js/bundle.js:251840:125
+commitHookEffectListMount@http://localhost:3000/static/js/bundle.js:256831:618
+commitHookPassiveMountEffects@http://localhost:3000/static/js/bundle.js:256868:56
+commitPassiveMountOnFiber@http://localhost:3000/static/js/bundle.js:257770:25
+recursivelyTraversePassiveMountEffects@http://localhost:3000/static/js/bundle.js:257761:129
+commitPassiveMountOnFiber@http://localhost:3000/static/js/bundle.js:257810:47
+recursivelyTraversePassiveMountEffects@http://localhost:3000/static/js/bundle.js:257761:129
+
+2->
+Uncaught runtime errors:
+ERROR
+[object Event]
+handleError@http://localhost:3000/static/js/bundle.js:346553:58
+./node_modules/webpack-dev-server/client/overlay.js/createOverlay/<@http://localhost:3000/static/js/bundle.js:346576:18
+EventListener.handleEvent*listenToUnhandledRejection@http://localhost:3000/static/js/bundle.js:346761:10
+createOverlay@http://localhost:3000/static/js/bundle.js:346574:90
+./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true@http://localhost:3000/static/js/bundle.js:345279:105
+options.factory@http://localhost:3000/static/js/bundle.js:377626:30
+__webpack_require__@http://localhost:3000/static/js/bundle.js:377018:32
+@http://localhost:3000/static/js/bundle.js:378217:30
+@http://localhost:3000/static/js/bundle.js:378221:12
+
+3->
+Uncaught Error: [Exception... "The async request failed because it was aborted by some user action"  nsresult: "0x804b0002 (NS_BINDING_ABORTED)"  location: "JS frame :: https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js :: load :: line 7"  data: no]
+
+load@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:7:144
+load@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:6:11633
+u@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:9341
+_loadModule@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:9470
+_resolve@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:9:452
+defineModule@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:5564
+_relativeRequire@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:6188
+o@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:8519
+loadForeignModule/<@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:62365
+loadForeignModule@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:62344
+_handleMessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:46016
+handleMessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:45641
+_handleRequestMessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:42492
+_handleMessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:41942
+handleMessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:41830
+onmessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:25:45733
+L/</</</globalThis.onmessage@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:11:455
+    unexpectedErrorHandler https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.js:9
+    setTimeout handler*L/this.unexpectedErrorHandler https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.js:7
+
+4->
+Uncaught runtime errors:
+ERROR
+A network error occurred.
+
+load@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:7:144
+load@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:6:11633
+u@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:9341
+_loadModule@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:9470
+_resolve@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:9:452
+defineModule@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:5564
+_relativeRequire@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:6188
+o@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/base/worker/workerMain.js:8:8519
+
+
+5->
+Loading failed for the <script> with source “https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js”. 71e643b:1:1
+Monaco initialization: error: 
+error { target: script, isTrusted: true, srcElement: script, currentTarget: script
+, eventPhase: 2, bubbles: false, cancelable: false, returnValue: true, defaultPrevented: false, composed: false, … }
+Editor.tsx:58:1
+Monaco initialization: error: 
+error { target: script, isTrusted: true, srcElement: script, currentTarget: script
+, eventPhase: 2, bubbles: false, cancelable: false, returnValue: true, defaultPrevented: false, composed: false, … }
+Editor.tsx:58:1
+Uncaught (in promise) 
+error { target: script, isTrusted:
+
+
+
+Uncaught runtime errors:
+ERROR
+Model is disposed!
+_assertNotDisposed@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.js:645:131
+getValue@https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.js:647:4690
+MonacoBinding@http://localhost:3000/static/js/bundle.js:355570:23
+./src/Room/Pages/
+
+
+
+No error Part 
+
+// "type": "module",
+  71e643b
+  7a9994f
+  eafcba6
+  bfcf9d8
+  4e3dd65
+  ce0aeca
+  c927159

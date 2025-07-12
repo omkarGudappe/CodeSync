@@ -1,0 +1,271 @@
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 100%;
+}
+
+.Toast-contain{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 100%;
+}
+
+/* Toast Design */
+.user-left-toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transform: translateX(150%);
+  animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 5s;
+  transition: all 0.3s ease;
+  max-width: 350px;
+}
+
+.user-leaved{
+border-left: 5px solid #ff6b6b;
+width: 45vw;
+}
+
+.toast-file-created{
+border-left: 5px solid rgb(0, 152, 0);
+width: 45vw;
+}
+
+.toast-message{
+font-weight: 600;
+font-size: 14px;
+}
+
+.filecreated-user-name {
+font-weight: 600;
+font-size: 14px;
+color: darkslategray;
+}
+
+/* Toast Icon */
+.toast-icon {
+  margin-right: 15px;
+  color: #ff6b6b;
+  font-size: 24px;
+}
+
+/* Toast Content */
+.toast-content {
+  flex: 1;
+}
+
+.toast-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.toast-message {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Progress Bar */
+.toast-progress , .Filecreate-RoomJoin-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 107, 107, 0.2);
+}
+
+.Filecreate-RoomJoin-progress::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #26fb54;
+  animation: progress 5s linear forwards;
+}
+
+.toast-progress::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #ff6b6b;
+  animation: progress 5s linear forwards;
+}
+
+/* Close Button */
+.toast-close {
+  margin-left: 15px;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toast-close:hover {
+  color: #333;
+  transform: rotate(90deg);
+}
+
+/* Animations */
+@keyframes slideIn {
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes progress {
+  to {
+      width: 0;
+  }
+}
+
+        
+@media (max-width: 600px) {
+  .toast-container {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
+  
+  .toast-file-created,
+  .toast-user-joined,
+  .user-left-toast {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+  
+  .toast-icon {
+    margin-right: 8px;
+  }
+  
+  .filecreated-user-name {
+    font-size: 13px;
+  }
+  
+  .toast-message {
+    font-size: 12px;
+  }
+} 
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast-wrapper {
+  animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 5s;
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast-wrapper {
+  animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 5s;
+  transition: all 0.3s ease;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Existing toast styles... */
+
+.user-left-toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 0; /* Remove margin-bottom */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transform: translateX(0);
+  animation: none; /* Remove animation from here */
+}
+
+/* Animation for slide in and fade out */
+@keyframes slideIn {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(150%);
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* For mobile */
+@media (max-width: 600px) {
+  .toast-container {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
+  
+  .toast-file-created,
+  .toast-user-joined,
+  .user-left-toast {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+  
+  .toast-icon {
+    margin-right: 8px;
+  }
+  
+  .filecreated-user-name {
+    font-size: 13px;
+  }
+  
+  .toast-message {
+    font-size: 12px;
+  }
+}

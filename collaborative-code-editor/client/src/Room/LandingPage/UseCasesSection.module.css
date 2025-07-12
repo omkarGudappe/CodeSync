@@ -1,0 +1,45 @@
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.bgDark {
+  background: var(--dark);
+}
+
+.featureCard {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.5);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.featureDesc {
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+}
