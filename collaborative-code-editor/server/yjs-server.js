@@ -1,8 +1,8 @@
 import http from 'http';
 import WebSocket, { WebSocketServer } from 'ws';
 import { setupWSConnection } from 'y-websocket/bin/utils.js';
-require('dotenv').config();
-
+import dotenv from 'dotenv';
+dotenv.config();
 const server = http.createServer();
 const wss = new WebSocketServer({ server });
 
