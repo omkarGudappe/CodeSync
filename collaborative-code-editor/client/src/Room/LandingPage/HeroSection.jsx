@@ -13,7 +13,7 @@ const HeroSection = () => {
               The most powerful collaborative code editor for pair programming, interviews, and teaching. No setup required.
             </p>
             <div className={`d-flex gap-3 animate__animated animate__fadeIn animate__delay-2s ${styles.heroButtons}`}>
-              <a href="/editor" className={`btn ${styles.btnPrimary}`}>Start Coding Now</a>
+              <a href="/HomePage" className={`btn ${styles.btnPrimary}`}>Start Coding Now</a>
               <a href="#features" className={`btn ${styles.btnOutlineLight}`}>See How It Works</a>
             </div>
           </div>
