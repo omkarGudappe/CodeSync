@@ -70,7 +70,7 @@ const TerminalE = ({ code, language, runTrigger , fitTrigger , onCodeOutput , On
     }, 50);
 
     // ...WebSocket setup (same as before)...
-    socket.current = new WebSocket('https://codesync-backend-terminalrun.onrender.com'); // Replace with your WebSocket URL
+    socket.current = new WebSocket('wss://codesync-backend-terminalrun.onrender.com'); // Replace with your WebSocket URL
     socket.current.onopen = () => {
       socket.current.send(JSON.stringify({ type: 'start', language }));
     };
@@ -189,7 +189,7 @@ useEffect(() => {
     }, 50);
 
     // Setup WebSocket connection
-    socket.current = new WebSocket('https://codesync-backend-terminalrun.onrender.com');
+    socket.current = new WebSocket('wss://codesync-backend-terminalrun.onrender.com');
     socket.current.onopen = () => {
       socket.current.send(JSON.stringify({ type: 'start', language }));
     };
