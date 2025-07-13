@@ -1,6 +1,10 @@
-import http from 'http';
-import WebSocket, { WebSocketServer } from 'ws';
-import { setupWSConnection } from 'y-websocket/bin/utils.js';
+const http = require('http');
+const WebSocket = require('ws');
+const { WebSocketServer } = WebSocket;
+const { setupWSConnection } = require('./utils.js');
+require('dotenv').config();
+
+const port = process.env.PORT || 1234;
 
 const server = http.createServer();
 const wss = new WebSocketServer({ server });
@@ -9,6 +13,6 @@ wss.on('connection', (conn, req) => {
   setupWSConnection(conn, req);
 });
 
-server.listen(1234, () => {
-  console.log('✅ Yjs WebSocket server running on ws://localhost:1234');
+server.listen(port, '0.0.0.0', () => {
+  console.log(`✅ Yjs WebSocket server running on ws://0.0.0.0:${port}`);
 });
