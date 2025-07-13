@@ -4,7 +4,7 @@ const WebSocket = require('ws');
 const Docker = require('dockerode');
 require('dotenv').config();
 const { v4: uuidv4 } = require('uuid');
-
+require('dotenv').config();
 const docker = new Docker();
 const app = express();
 const server = http.createServer(app);

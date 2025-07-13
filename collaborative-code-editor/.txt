@@ -103,3 +103,47 @@ No error Part
   4e3dd65
   ce0aeca
   c927159
+
+
+  react-> https://codesync-gray.vercel.app
+  index.js -> https://codesync-rqbm.onrender.com
+  terminal -> https://codesync-backend-terminalrun.onrender.com
+  yjs->
+
+
+
+
+
+
+    run `npm fund` for details
+found 0 vulnerabilities
+==> Uploading build...
+==> Uploaded in 3.6s. Compression took 1.9s
+==> Build successful
+==> Deploying...
+==> Running 'npx y-websocket --port 1234'
+running at 'localhost' on port 10000
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+
+==> Uploaded in 3.6s. Compression took 1.9s
+==> Build successful 🎉
+==> Deploying...
+==> Running 'npx y-websocket --port $PORT --host 0.0.0.0'
+running at 'localhost' on port 10000
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> No open ports detected on 0.0.0.0, continuing to scan...
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+==> Port scan timeout reached, no open ports detected on 0.0.0.0. Detected open ports on localhost -- did you mean to bind one of these to 0.0.0.0?
+==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
