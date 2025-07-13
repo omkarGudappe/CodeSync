@@ -721,7 +721,7 @@ useEffect(() => {
       ydoc = new Y.Doc();
       yDocs.current[fileName] = ydoc;
 
-      provider = new WebsocketProvider('https://codesync-yjscon.onrender.com', docName, ydoc, {
+      provider = new WebsocketProvider('wss://codesync-yjscon.onrender.com', docName, ydoc, {
         connect: true,
         maxBackoffTime: 5000,
       });
