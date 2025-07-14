@@ -4,7 +4,7 @@ const { WebSocketServer } = WebSocket;
 const { setupWSConnection } = require('./utils.js');
 require('dotenv').config();
 
-const port = process.env.PORT || 1234;
+const port = process.env.PORT || 1234; // Use Render's injected PORT
 
 const server = http.createServer();
 const wss = new WebSocketServer({ server });
