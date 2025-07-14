@@ -11,7 +11,7 @@ wss.on('connection', (conn, req) => {
   setupWSConnection(conn, req);
 });
 
-const port = process.env.PORT; // use only this for Render!
+const port = 1234; // use only this for Render!
 server.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
