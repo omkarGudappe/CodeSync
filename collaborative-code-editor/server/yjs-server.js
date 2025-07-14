@@ -12,6 +12,6 @@ wss.on('connection', (conn, req) => {
 });
 
 const port = 1234; // use only this for Render!
-server.listen(port, '0.0.0.0', () => {
+server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
