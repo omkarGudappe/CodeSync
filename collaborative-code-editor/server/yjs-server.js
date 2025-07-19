@@ -64,7 +64,6 @@ const wss = new WebSocketServer({
   }
 });
 
-// Enhanced connection handler with logging
 wss.on('connection', (conn, req) => {
   console.log('New connection from:', req.headers['origin']);
   console.log('Request URL:', req.url);
@@ -77,10 +76,24 @@ wss.on('connection', (conn, req) => {
     console.log('Connection closed');
   });
   
-  setupWSConnection(conn, req);
+  try {
+    setupWSConnection(conn, req);
+  } catch (err) {
+    console.error('Connection setup error:', err);
+    conn.close();
+  }
 });
 
 const PORT = process.env.PORT || 1234;
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ Yjs WebSocket server running on wss://0.0.0.0:${PORT}`);
+});
+
+// Handle server errors
+server.on('error', (err) => {
+  console.error('Server error:', err);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught exception:', err);
 });
