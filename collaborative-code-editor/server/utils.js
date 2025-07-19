@@ -54,9 +54,7 @@ function writeSyncStep1(doc) {
 function writeSyncUpdate(doc, update) {
   const encoder = encoding.createEncoder();
   encoding.writeVarUint(encoder, messageSync);
-  // FIX: Use encodeUpdate not writeUpdate
-  const encodedUpdate = Y.encodeUpdate(update);
-  encoding.writeVarUint8Array(encoder, encodedUpdate);
+  encoding.writeUint8Array(encoder, update);
   return encoding.toUint8Array(encoder);
 }
 
