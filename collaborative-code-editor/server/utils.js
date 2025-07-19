@@ -1,3 +1,33 @@
+// const Y = require('yjs');
+// const encoding = require('lib0/encoding');
+// const decoding = require('lib0/decoding');
+// const map = new Map();
+
+// // Message types used by y-protocols
+// const messageSync = 0;
+// const messageAwareness = 1;
+// const messageAuth = 2;
+
+// // Ping interval
+// const pingIntervalMs = 30000;
+
+// // Awareness handling (like cursors and presence)
+// const awarenessStates = new Map();
+
+// function writeSyncStep1(doc) {
+//   const encoder = encoding.createEncoder();
+//   encoding.writeVarUint(encoder, messageSync);
+//   Y.encodeStateVector(doc, encoder);
+//   return encoding.toUint8Array(encoder);
+// }
+
+// function writeSyncUpdate(doc, update) {
+//   const encoder = encoding.createEncoder();
+//   encoding.writeVarUint(encoder, messageSync);
+//   Y.writeUpdate(update, encoder);
+//   return encoding.toUint8Array(encoder);
+// }
+
 const Y = require('yjs');
 const encoding = require('lib0/encoding');
 const decoding = require('lib0/decoding');
@@ -24,9 +54,13 @@ function writeSyncStep1(doc) {
 function writeSyncUpdate(doc, update) {
   const encoder = encoding.createEncoder();
   encoding.writeVarUint(encoder, messageSync);
-  Y.writeUpdate(update, encoder);
+  // FIX: Use encodeUpdate not writeUpdate
+  const encodedUpdate = Y.encodeUpdate(update);
+  encoding.writeVarUint8Array(encoder, encodedUpdate);
   return encoding.toUint8Array(encoder);
 }
+
+// ... rest unchanged ...
 
 function setupWSConnection(conn, req) {
   const docName = req.url.slice(1).split('?')[0];
