@@ -721,10 +721,40 @@ useEffect(() => {
       ydoc = new Y.Doc();
       yDocs.current[fileName] = ydoc;
 
-      provider = new WebsocketProvider('wss://codesync-yjs-server-con.onrender.com', docName, ydoc, {
-        connect: true,
-        maxBackoffTime: 5000,
-      });
+      // provider = new WebsocketProvider('wss://codesync-yjs-server-con.onrender.com', docName, ydoc, {
+      //   connect: true,
+      //   maxBackoffTime: 5000,
+      // });
+      // Replace your WebSocketProvider initialization with:
+        provider = new WebsocketProvider(
+          'wss://codesync-yjs-server-con.onrender.com', 
+          docName, 
+          ydoc, 
+          {
+            connect: true,
+            maxBackoffTime: 5000,
+            resyncInterval: 5000, // Add resync interval
+            WebSocketPolyfill: require('isomorphic-ws'), // Ensure consistent WebSocket implementation
+            awareness: new awarenessProtocol.Awareness(ydoc)
+          }
+        );
+        
+        // Add error handling
+        provider.on('error', (err) => {
+          console.error('Yjs provider error:', err);
+          setErrorMessage(prev => [...prev, { 
+            id: Date.now(), 
+            message: 'Connection error - attempting to reconnect...' 
+          }]);
+        });
+        
+        provider.on('status', ({ status }) => {
+          if (status === 'connected') {
+            setIsYjsSynced(true);
+          } else {
+            setIsYjsSynced(false);
+          }
+        });
       yProviders.current[fileName] = provider;
 
       const yText = ydoc.getText('monaco');
