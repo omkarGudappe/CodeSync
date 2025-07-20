@@ -81,7 +81,7 @@ const HomePage = () => {
         // socket.emit("join-room" , {roomId:ROOMID , finalName , isCreator:true});
 
         try{
-          const res = await fetch("https://codesync-yhba.onrender.com/api/allow-create" , {
+          const res = await fetch("https://codesync-yhba-idoc.onrender.com/api/allow-create" , {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({ ROOMID })
