@@ -15,7 +15,7 @@ export default function InviteRoom(props) {
     };
 
     const shareViaWhatsApp = () => {
-        const text = `Join my coding room on :\n${window.location.origin}`;
+        const text = `Join my coding room on :\n${window.location.origin}/HomePage`;
         const RoomId = `My Room ID : ${props.roomId}`;
         const MainText = `${text}\n${RoomId}`;
         window.open(`https://wa.me/?text=${encodeURIComponent(MainText)}`, '_blank');
@@ -23,12 +23,12 @@ export default function InviteRoom(props) {
 
     const shareViaEmail = () => {
         const subject = "Join my coding room on ";
-        const body = `Hi,\n\nJoin my coding room at: ${window.location.origin}\nMy Room Id Is: ${props.roomId}\n\nSee you there!`;
+        const body = `Hi,\n\nJoin my coding room at: ${window.location.origin}/HomePage\nMy Room Id Is: ${props.roomId}\n\nSee you there!`;
         window.open(`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
     };
 
     const shareViaTwitter = () => {
-        const text = `Join my coding room on :\n${window.location.origin}`;
+        const text = `Join my coding room on :\n${window.location.origin}/HomePage`;
         const RoomId = `My Room ID : ${props.roomId}`;
         const MainText = `${text}\n${RoomId}`;    
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(MainText)}`, '_blank');
@@ -40,7 +40,7 @@ export default function InviteRoom(props) {
             setIsLinkCopied(false);
         } , 3000);
 
-        const fullUrl = `${window.location.origin}`;
+        const fullUrl = `${window.location.origin}/HomePage`;
         const roomPath = `${fullUrl}\nRoom ID: ${props.roomId}`;
         navigator.clipboard.writeText(roomPath)
         .catch(() => props.setErrorMessage(prev => prev.some(e => e.message === "Failed to copy link.")
@@ -67,7 +67,7 @@ export default function InviteRoom(props) {
               </div>
               <div className='share-options'>
                 <div className='d-flex justify-content-center mt-5'>
-                    <input className='CopyText' type="text" defaultValue={window.location.origin} />
+                    <input className='CopyText' type="text" value={`${window.location.origin}/HomePage`} />
                     <button onClick={() => {setIsLinkCopied(true) ; handleShareRoomCopy();}} className={`CopyTextBtn ${isLinkCopied ? 'BtnActive' : 'NotBtnActive'}`} aria-readonly >
                         {isLinkCopied ? (
                             <>
