@@ -12,7 +12,7 @@ const CTASection = () => {
               Develop, collaborate, and run code together — all in real-time with CodeSync.
             </p>
             <div className={styles.ctaButtons}>
-             <Link to="/editor" className={`btn ${styles.btnPrimary} btn-lg me-3`}>
+             <Link to="/HomePage" className={`btn ${styles.btnPrimary} btn-lg me-3`}>
                 Get Started for Free
               </Link>
               <a href="#features" className={`btn ${styles.btnOutlineLight} btn-lg`}>See Features</a>
