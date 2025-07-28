@@ -607,9 +607,9 @@ html, body, #root {
   transition: opacity 0.15s linear;
 }
 
-.modal-backdrop.fade.show {
+/* .modal-backdrop.fade.show {
   opacity: 1;
-}
+} */
 
 #exampleModal{
   z-index: 10000;
